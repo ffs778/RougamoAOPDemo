@@ -24,7 +24,10 @@ namespace AOPDemo
             loginWindow.Show();
         }
 
-        [Check(Permisson.Engineer)]
+        
+        [Log]
+        [CatchException]
+        [CheckPermisson(Permisson.Engineer)]
         private void Func_Click(object sender, EventArgs e)
         {
             MessageBox.Show("打开功能中...");
